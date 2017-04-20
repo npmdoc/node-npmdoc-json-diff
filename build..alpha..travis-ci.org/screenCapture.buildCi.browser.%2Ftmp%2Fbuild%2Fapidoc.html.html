@@ -1,0 +1,277 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/andreyvit/json-diff">json-diff (v0.3.1)</a>
+</h1>
+<h4>JSON diff</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-diff">module json-diff</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.diff">
+            function <span class="apidocSignatureSpan">json-diff.</span>diff
+            <span class="apidocSignatureSpan">(obj1, obj2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.diffString">
+            function <span class="apidocSignatureSpan">json-diff.</span>diffString
+            <span class="apidocSignatureSpan">(obj1, obj2, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">json-diff.</span>colorize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">json-diff.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-diff.colorize">module json-diff.colorize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.colorize.colorize">
+            function <span class="apidocSignatureSpan">json-diff.</span>colorize
+            <span class="apidocSignatureSpan">(diff, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.colorize.colorizeToArray">
+            function <span class="apidocSignatureSpan">json-diff.colorize.</span>colorizeToArray
+            <span class="apidocSignatureSpan">(diff)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.colorize.colorizeToCallback">
+            function <span class="apidocSignatureSpan">json-diff.colorize.</span>colorizeToCallback
+            <span class="apidocSignatureSpan">(diff, output)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-diff.util">module json-diff.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-diff.util.extendedTypeOf">
+            function <span class="apidocSignatureSpan">json-diff.util.</span>extendedTypeOf
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-diff" id="apidoc.module.json-diff">module json-diff</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.diff" id="apidoc.element.json-diff.diff">
+        function <span class="apidocSignatureSpan">json-diff.</span>diff
+        <span class="apidocSignatureSpan">(obj1, obj2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (obj1, obj2) {
+  var change, score, _ref;
+  _ref = diffWithScore(obj1, obj2), score = _ref[0], change = _ref[1];
+  return change;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.diffString" id="apidoc.element.json-diff.diffString">
+        function <span class="apidocSignatureSpan">json-diff.</span>diffString
+        <span class="apidocSignatureSpan">(obj1, obj2, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diffString = function (obj1, obj2, options) {
+  return colorize(diff(obj1, obj2), options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-diff.colorize" id="apidoc.module.json-diff.colorize">module json-diff.colorize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.colorize.colorize" id="apidoc.element.json-diff.colorize.colorize">
+        function <span class="apidocSignatureSpan">json-diff.</span>colorize
+        <span class="apidocSignatureSpan">(diff, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">colorize = function (diff, options) {
+  var output;
+  if (options == null) options = {};
+  output = [];
+  colorizeToCallback(diff, function(color, line) {
+    var _ref, _ref1, _ref2;
+    if ((_ref = options.color) != null ? _ref : true) {
+      return output.push(((_ref1 = (_ref2 = options.theme) != null ? _ref2[color] : void 0) != null ? _ref1 : Theme[color])("" +
+color + line) + "\n");
+    } else {
+      return output.push("" + color + line + "\n");
+    }
+  });
+  return output.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.colorize.colorizeToArray" id="apidoc.element.json-diff.colorize.colorizeToArray">
+        function <span class="apidocSignatureSpan">json-diff.colorize.</span>colorizeToArray
+        <span class="apidocSignatureSpan">(diff)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">colorizeToArray = function (diff) {
+  var output;
+  output = [];
+  colorizeToCallback(diff, function(color, line) {
+    return output.push("" + color + line);
+  });
+  return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.colorize.colorizeToCallback" id="apidoc.element.json-diff.colorize.colorizeToCallback">
+        function <span class="apidocSignatureSpan">json-diff.colorize.</span>colorizeToCallback
+        <span class="apidocSignatureSpan">(diff, output)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">colorizeToCallback = function (diff, output) {
+  return subcolorizeToCallback('', diff, output, ' ', '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-diff.util" id="apidoc.module.json-diff.util">module json-diff.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-diff.util.extendedTypeOf" id="apidoc.element.json-diff.util.extendedTypeOf">
+        function <span class="apidocSignatureSpan">json-diff.util.</span>extendedTypeOf
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendedTypeOf = function (obj) {
+  var result;
+  result = typeof obj;
+  if (!(obj != null)) {
+    return 'null';
+  } else if (result === 'object' &amp;&amp; obj.constructor === Array) {
+    return 'array';
+  } else {
+    return result;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
